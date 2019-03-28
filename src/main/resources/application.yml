@@ -1,0 +1,19 @@
+spring:
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: validate
+      naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      show_sql: true
+      format_sql: true
+
+# Data source config
+  datasource:
+    url: jdbc:postgresql://localhost:5432/world
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    tomcat.max-active: 5
+    tomcat.initial-size: 2
+    tomcat.min-idle: 2
+    tomcat.max-idle: 5
